@@ -4,8 +4,11 @@ var defaultBackgroundColor = Colors.grey[300];
 var appBarColor = Colors.grey[900];
 var myAppBar = AppBar(
   backgroundColor: appBarColor,
-  title: Text(' '),
+  title: Text('TechTown'),
   centerTitle: false,
+  actions: [
+    IconButton(onPressed: ()=>{}, icon: Icon(Icons.home))
+  ],
 );
 var drawerTextColor = TextStyle(
   color: Colors.grey[600],

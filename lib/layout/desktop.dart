@@ -1,4 +1,7 @@
+import 'package:cms_app/pages/login.dart';
+import 'package:cms_app/util/appbar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../constants.dart';
 import '../util/my_box.dart';
 import '../util/my_tile.dart';
@@ -11,82 +14,38 @@ class DesktopScaffold extends StatefulWidget {
 }
 
 class _DesktopScaffoldState extends State<DesktopScaffold> {
+  var isLoginPage = false;
+
+  login() {
+    setState(() {
+      isLoginPage = !isLoginPage;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: defaultBackgroundColor,
-      appBar: myAppBar,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: AppBarNav(login: login),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Column(
           children: [
-            // open drawer
-            myDrawer,
-
-            // first half of page
-            Expanded(
-              flex: 2,
-              child: Column(
-                children: [
-                  // first 4 boxes in grid
-                  AspectRatio(
-                    aspectRatio: 4,
-                    child: SizedBox(
-                      width: double.infinity,
-                      child: GridView.builder(
-                        itemCount: 4,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 4),
-                        itemBuilder: (context, index) {
-                          return MyBox();
-                        },
-                      ),
-                    ),
+            isLoginPage
+                ? const LoginPage()
+                : Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        children: [
+                          Text("Hi")
+                        ],
+                      )
+                    ],
                   ),
-
-                  // list of previous days
-                  Expanded(
-                    child: ListView.builder(
-                      itemCount: 7,
-                      itemBuilder: (context, index) {
-                        return const MyTile();
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            // second half of page
-            Expanded(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 400,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.grey[400],
-                      ),
-                    ),
-                  ),
-                  // list of stuff
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.grey[200],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
           ],
         ),
       ),
