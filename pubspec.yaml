@@ -1,19 +1,19 @@
 name: cms_app
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.1.2 <4.0.0'
+  sdk: ">=2.19.6 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  json_theme: ^6.2.2
-  json_class: ^3.0.0+2
-  json_serializable: ^6.6.1
-  cupertino_icons: ^1.0.2
-  provider: ^6.0.5
+  json_theme:
+  json_class:
+  json_serializable:
+  cupertino_icons:
+  provider:
 
 dev_dependencies:
   flutter_test:
@@ -24,9 +24,9 @@ flutter:
   uses-material-design: true
 
   assets:
-      - assets/images/
-      - assets/icons/
-      - assets/appainter_theme.json
+    - assets/images/
+    - assets/icons/
+    - assets/appainter_theme.json
 
   fonts:
     - family: OpenSans

@@ -27,7 +27,7 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
     return Scaffold(
       backgroundColor: defaultBackgroundColor,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
+        preferredSize: Size.fromHeight(80),
         child: AppBarNav(login: login),
       ),
       body: Padding(
@@ -40,9 +40,7 @@ class _DesktopScaffoldState extends State<DesktopScaffold> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Column(
-                        children: [
-                          Text("Hi")
-                        ],
+                        children: [],
                       )
                     ],
                   ),

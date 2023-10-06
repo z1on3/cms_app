@@ -1,5 +1,3 @@
-import 'package:cms_app/constants.dart';
-import 'package:cms_app/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class AppBarNav extends StatelessWidget {
@@ -9,15 +7,17 @@ class AppBarNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double maxWidth = 1140; // Your desired maximum width
+
     return Container(
       decoration: const BoxDecoration(color: Colors.black),
-      clipBehavior: Clip.none,
-      height: 60,
+      height: 80,
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
+          Expanded(child: Row()),
+          Text(
             "TechTown",
             style: TextStyle(
               color: Colors.white,
@@ -26,12 +26,9 @@ class AppBarNav extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
-            width: 20,
-          ),
-          Expanded(child: Row()),
-          SizedBox(
-            width: 200,
+          SizedBox(width: 20),
+          Container(
+            width: MediaQuery.of(context).size.width - maxWidth,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -39,11 +36,12 @@ class AppBarNav extends StatelessWidget {
                   onPressed: () => {login()},
                   icon: const Icon(Icons.person),
                   color: Colors.white,
-                  hoverColor: AppTheme.red,
+                  hoverColor: null,
                 ),
               ],
             ),
           ),
+          Expanded(child: Row()),
         ],
       ),
     );
