@@ -11,9 +11,9 @@ class AppTheme extends InheritedWidget {
 
   static const Color textColor = Color(0xFF0C0C0C);
   static const Color blackLight = Color(0xFF292031);
-  static const Color secondaryColor = Color(0xFF75565B);
-  static const Color selectedColor = Color(0xFF5E1133);
-  static const Color primaryColor = Color(0xFFBC004B);
+  static const Color secondaryColor = Color.fromARGB(255, 117, 86, 86);
+  static const Color selectedColor = Color.fromARGB(255, 94, 17, 17);
+  static const Color primaryColor = Color.fromARGB(255, 188, 0, 0);
   static const Color onPrimaryContainerColor = Color(0xFF400014);
   static const Color primaryContainerColor = Color(0xFFFFD9DE);
   static const Color surfaceColor = Color(0xFFF3DDDF);

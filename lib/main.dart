@@ -3,6 +3,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:json_theme/json_theme.dart';
+import 'package:provider/provider.dart';
 import 'layout/desktop.dart';
 import 'layout/tablet.dart';
 import 'layout/mobile.dart';
@@ -12,6 +14,8 @@ import 'theme/theme_provider.dart';
 
 void main() {
   runZonedGuarded<Future<void>>(() async {
+    WidgetsFlutterBinding.ensureInitialized();
+
     final themeStr = await rootBundle.loadString('assets/appainter_theme.json');
     final themeDarkStr =
         await rootBundle.loadString('assets/appainter_theme.json');
@@ -22,7 +26,7 @@ void main() {
     final appThemeData = AppThemeData(
       theme.copyWith(
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: AppTheme.pink,
+          backgroundColor: AppTheme.red,
           foregroundColor: AppTheme.black,
         ),
       ),
@@ -48,7 +52,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.green),
+      theme: theme.theme,
+      darkTheme: theme.darkTheme,
       home: ResponsiveLayout(
         mobileBody: const MobileScaffold(),
         tabletBody: const TabletScaffold(),

@@ -73,7 +73,7 @@
       "onTertiaryContainer": "#ff000000",
       "outline": "#ff000000",
       "outlineVariant": "#ff000000",
-      "primary": "#ffef5da8",
+      "primary": "#ff0000",
       "primaryContainer": "#ff6200ee",
       "secondary": "#fff9c4df",
       "secondaryContainer": "#ff03dac6",
@@ -139,7 +139,7 @@
       "hovered": "#8a000000",
       "pressed": "#8a000000",
       "scrolledUnder": "#8a000000",
-      "selected": "#ffef5da8"
+      "selected": "#ff0000"
     }
   },
   "colorScheme": {
@@ -163,7 +163,7 @@
     "onTertiaryContainer": "#ff000000",
     "outline": "#ff000000",
     "outlineVariant": "#ff000000",
-    "primary": "#ffef5da8",
+    "primary": "#ff0000",
     "primaryContainer": "#ff6200ee",
     "secondary": "#fff9c4df",
     "secondaryContainer": "#ff03dac6",
@@ -351,14 +351,14 @@
       }
     }
   },
-  "focusColor": "#b3ef5da8",
+  "focusColor": "#b30000",
   "highlightColor": "#66bcbcbc",
   "hintColor": "#99000000",
   "hoverColor": "#67fb92d7",
   "iconTheme": {
     "color": "#ff5e1133"
   },
-  "indicatorColor": "#ffef5da8",
+  "indicatorColor": "#ff0000",
   "inputDecorationTheme": {
     "alignLabelWithHint": false,
     "border": {
@@ -475,9 +475,9 @@
         }
       },
       "overlayColor": {
-        "focused": "#1fef5da8",
-        "hovered": "#0aef5da8",
-        "pressed": "#1fef5da8"
+        "focused": "#1f0000",
+        "hovered": "#0a0000",
+        "pressed": "#1f0000"
       },
       "shadowColor": {
         "disabled": "#ff000000",
@@ -576,7 +576,7 @@
     }
   },
   "platform": "macOS",
-  "primaryColor": "#ffef5da8",
+  "primaryColor": "#ff0000",
   "primaryColorDark": "#ffbf4a86",
   "primaryColorLight": "#fff59ecb",
   "primaryIconTheme": {
@@ -684,7 +684,7 @@
       "hovered": "#8a000000",
       "pressed": "#8a000000",
       "scrolledUnder": "#8a000000",
-      "selected": "#ffef5da8"
+      "selected": "#ff0000"
     }
   },
   "scaffoldBackgroundColor": "#fffff7fa",
@@ -702,7 +702,7 @@
       "hovered": "#93facfe5",
       "pressed": "#93facfe5",
       "scrolledUnder": "#93facfe5",
-      "selected": "#ffef5da8"
+      "selected": "#ff0000"
     }
   },
   "tabBarTheme": {
@@ -804,9 +804,9 @@
         }
       },
       "overlayColor": {
-        "focused": "#1fef5da8",
-        "hovered": "#0aef5da8",
-        "pressed": "#1fef5da8"
+        "focused": "#1f0000",
+        "hovered": "#0a0000",
+        "pressed": "#1f0000"
       },
       "shadowColor": {
         "disabled": "#ff000000",
