@@ -14,6 +14,7 @@ dependencies:
   json_serializable:
   cupertino_icons:
   provider:
+  hover:
 
 dev_dependencies:
   flutter_test:
@@ -39,3 +40,7 @@ flutter:
           weight: 600
         - asset: assets/fonts/OpenSans-Bold.ttf
           weight: 700
+    - family: FjallaOne
+      fonts:
+        - asset: assets/fonts/FjallaOne-Regular.ttf
+          weight: 400

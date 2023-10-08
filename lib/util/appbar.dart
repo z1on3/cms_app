@@ -1,3 +1,4 @@
+import 'package:cms_app/util/menu_item.dart';
 import 'package:flutter/material.dart';
 
 class AppBarNav extends StatelessWidget {
@@ -7,7 +8,8 @@ class AppBarNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double maxWidth = 1140; // Your desired maximum width
+    double maxWidth = 1370;
+    double currWidth = MediaQuery.of(context).size.width;
 
     return Container(
       decoration: const BoxDecoration(color: Colors.black),
@@ -15,23 +17,25 @@ class AppBarNav extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(child: Row()),
-          Text(
-            "TechTown",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontFamily: "OpenSans",
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          SizedBox(width: 20),
           Container(
-            width: MediaQuery.of(context).size.width - maxWidth,
+            width: currWidth >= maxWidth + 32 ? maxWidth : currWidth - 32,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
               children: [
+                Image.asset("images/playtech-mainsite-logo.webp"),
+                SizedBox(width: 20),
+                Text(
+                  "GAMING PC",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontFamily: "FjallaOne",
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                MenuItem(onClick: login),
+                Expanded(child: Row()),
                 IconButton(
                   onPressed: () => {login()},
                   icon: const Icon(Icons.person),
@@ -41,7 +45,6 @@ class AppBarNav extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(child: Row()),
         ],
       ),
     );
